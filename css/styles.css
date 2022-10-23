@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Hi+Melody&family=Jua&family=Lobster&family=Nanum+Myeongjo&family=Permanent+Marker&family=Roboto&family=Sansita:wght@400;700;800&family=Tangerine&display=swap");
+@import "variables.css";
+@import "reset.css";
+@import "palette.css";
+@import "brush.css";
+@import "buttons.css";
+@import "text.css";
+
+body {
+  font-family: "Sansita", cursive;
+  background-color: rgba(255, 228, 196, 0.6);
+  display: flex;
+
+  align-items: center;
+  gap: 20px;
+  margin: 60px;
+  height: 100%;
+  width: 100%;
+}
+
+canvas {
+  width: 800px;
+  height: 788px;
+  background-color: white;
+  border-radius: 25px;
+  border: 7px solid var(--brown);
+  box-shadow: 1px 2px 8px 2px rgba(0, 0, 0, 0.6);
+  margin-right: 40px;
+}
+
+section {
+  width: 400px;
+  height: 800px;
+  background-color: var(--brown);
+  box-shadow: 1px 2px 8px 2px rgba(0, 0, 0, 0.6);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tools {
+  border-radius: 5px;
+  width: 320px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 3px solid var(--pink);
+  border-radius: 10px;
+  padding: 10px;
+  width: 320px;
+  margin-bottom: 20px;
+}
+
+legend {
+  margin-right: auto;
+  margin-left: 2px;
+  position: relative;
+  font-weight: 600;
+  color: var(--brown);
+  background-color: var(--pink);
+  padding: 6px 10px;
+  border-radius: 5px;
+  display: flex;
+  font-size: 18px;
+}

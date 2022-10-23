@@ -5,89 +5,174 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meme Maker</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <div class="color-options">
-      <input type="color" id="color" />
-      <div
-        class="color-option"
-        style="background-color: #1abc9c"
-        data-color="#1abc9c"
-      ></div>
-      <div
-        class="color-option"
-        style="background-color: #3498db"
-        data-color="#3498db"
-      ></div>
-      <div
-        class="color-option"
-        style="background-color: #34495e"
-        data-color="#34495e"
-      ></div>
-      <div
-        class="color-option"
-        style="background-color: #27ae60"
-        data-color="#27ae60"
-      ></div>
-      <div
-        class="color-option"
-        style="background-color: #8e44ad"
-        data-color="#8e44ad"
-      ></div>
-      <div
-        class="color-option"
-        style="background-color: #f1c40f"
-        data-color="#f1c40f"
-      ></div>
-      <div
-        class="color-option"
-        style="background-color: #e74c3c"
-        data-color="#e74c3c"
-      ></div>
-      <div
-        class="color-option"
-        style="background-color: #95a5a6"
-        data-color="#95a5a6"
-      ></div>
-      <div
-        class="color-option"
-        style="background-color: #d35400"
-        data-color="#d35400"
-      ></div>
-      <div
-        class="color-option"
-        style="background-color: #2ecc71"
-        data-color="#2ecc71"
-      ></div>
-      <div
-        class="color-option"
-        style="background-color: #e67e22"
-        data-color="#e67e22"
-      ></div>
-    </div>
     <canvas></canvas>
 
-    <div class="btns">
-      <input
-        id="line-width"
-        type="range"
-        min="1"
-        max="10"
-        value="5"
-        step="0.5"
-      />
+    <section>
+      <div class="tools">
+        <div class="tools__colors">
+          <fieldset>
+            <legend>Color Palette</legend>
+            <div class="color-selected">
+              <input id="color" type="color" />
+            </div>
 
-      <button id="mode-btn">🩸 Fill</button>
-      <button id="destroy-btn">💣 Destroy</button>
-      <button id="eraser-btn">❌ Erase</button>
-      <label for="file">
-        📸 Add Photo
-        <input type="file" accept="image/*" id="file"
-      /></label>
-      <input type="text" id="text" placeholder="Write and then double click" />
-      <button id="save">🖼 Save Image</button>
-    </div>
+            <div class="color-palette">
+              <div
+                class="color-option"
+                style="background-color: #ff9aa2"
+                data-color="#ff9aa2"
+              ></div>
+              <div
+                class="color-option"
+                style="background-color: #ffb7b2"
+                data-color="#ffb7b2"
+              ></div>
+              <div
+                class="color-option"
+                style="background-color: #ffdac1"
+                data-color="#ffdac1"
+              ></div>
+              <div
+                class="color-option"
+                style="background-color: #ffffd8"
+                data-color="#ffffd8"
+              ></div>
+              <div
+                class="color-option"
+                style="background-color: #b5ead7"
+                data-color="#b5ead7"
+              ></div>
+              <div
+                class="color-option"
+                style="background-color: #7ec4cf"
+                data-color="#7ec4cf"
+              ></div>
+              <div
+                class="color-option"
+                style="background-color: #beeafa"
+                data-color="#beeafa"
+              ></div>
+              <div
+                class="color-option"
+                style="background-color: #a4d8f5"
+                data-color="#a4d8f5"
+              ></div>
+              <div
+                class="color-option"
+                style="background-color: #c6ceea"
+                data-color="#c6ceea"
+              ></div>
+              <div
+                class="color-option"
+                style="background-color: #989fa7"
+                data-color="#989fa7"
+              ></div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="tool__brush">
+          <fieldset>
+            <legend>Brush Size</legend>
+            <input
+              id="line-width"
+              type="range"
+              min="1"
+              max="10"
+              value="5"
+              step="0.5"
+            />
+          </fieldset>
+        </div>
+
+        <div class="tools__btns">
+          <fieldset>
+            <legend>Mode</legend>
+            <div class="btns__top-row">
+              <button id="pen-btn">Pen</button>
+              <button id="shape-btn">Shape</button>
+              <button id="rectangle-btn">Rectangle</button>
+              <button id="circle-btn">Circle</button>
+            </div>
+            <div class="btns__bottom-row">
+              <button id="eraser-btn">Erase</button>
+              <button id="fill-btn">Fill</button>
+              <label for="file">
+                Add Image
+                <input type="file" accept="image/*" id="file"
+              /></label>
+              <button id="reset-btn">Reset</button>
+            </div>
+          </fieldset>
+        </div>
+
+        <fieldset>
+          <legend>Text</legend>
+          <div class="tools__text">
+            <select id="fontTypes" required>
+              <option
+                value="Nanum Myeongjo"
+                style="font-family: 'Nanum Myeongjo', serif"
+              >
+                나눔명조
+              </option>
+              <option value="Jua" style="font-family: 'Jua', sans-serif">
+                Jua
+              </option>
+              <option
+                value="Hi Melody"
+                style="font-family: 'Hi Melody', cursive"
+              >
+                Hi Melody
+              </option>
+              <option value="Lobster" style="font-family: 'Lobster', cursive">
+                Lobster
+              </option>
+
+              <option
+                value="Permanent Marker"
+                style="font-family: 'Permanent Marker', cursive"
+              >
+                Permanent Marker
+              </option>
+              <option value="Roboto" style="font-family: 'Roboto', sans-serif">
+                Roboto
+              </option>
+              <option
+                value="Sansita"
+                style="font-family: 'Sansita', sans-serif"
+              >
+                Sansita
+              </option>
+              <option
+                value="Tangerine"
+                style="font-family: 'Tangerine', cursive"
+              >
+                Tangerine
+              </option>
+            </select>
+            <input id="fontSizes" type="number" value="28" />
+            <select id="fontEffects" required>
+              <option value="fill" selected>Fill</option>
+              <option value="stroke">Stroke</option>
+            </select>
+          </div>
+          <input
+            type="text"
+            id="text"
+            placeholder="Write and then double click"
+          />
+        </fieldset>
+
+        <div class="tools__save">
+          <button id="save">Save</button>
+        </div>
+      </div>
+    </section>
+
     <script src="app.js"></script>
   </body>
 </html>

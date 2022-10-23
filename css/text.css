@@ -1,0 +1,50 @@
+.tools__text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.tools__text input,
+.tools__text select {
+  background-color: var(--btn-color);
+  margin-right: 10px;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  height: 22px;
+  cursor: pointer;
+}
+
+.tools__text input {
+  width: 20%;
+}
+
+.tools__text select {
+  width: 50%;
+  margin-left: 5px;
+}
+
+#fontEffects {
+  width: 40%;
+}
+
+.tools__text input:hover,
+.tools__text select:hover,
+input#text:focus {
+  background-color: var(--yellow);
+}
+
+input#text {
+  all: unset;
+  padding: 10px 0;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: 400;
+  background-color: var(--btn-color);
+  width: 96%;
+  margin: 10px 5px;
+  display: flex;
+}

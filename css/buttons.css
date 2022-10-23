@@ -1,0 +1,44 @@
+.tools__btns {
+}
+
+button,
+label {
+  all: unset;
+  padding: 10px;
+  text-align: center;
+  background-color: var(--btn-color);
+  color: rgb(69, 60, 59);
+  font-weight: 400;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: opacity linear 0.1s;
+  height: 18px;
+  width: 40px;
+  margin: 8px 5px;
+}
+
+button:hover,
+label:hover {
+  background-color: var(--yellow);
+}
+
+#rectangle-btn {
+  width: 70px;
+}
+
+input#file {
+  display: none;
+}
+
+#save {
+  background-color: var(--pink);
+  opacity: 0.7;
+  height: 16px;
+  width: 320px;
+  margin: none;
+}
+
+#save:hover {
+  opacity: 1;
+  transition: opacity linear 0.3s;
+}
