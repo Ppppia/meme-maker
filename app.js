@@ -67,13 +67,13 @@ function onMove(event) {
   ctx.moveTo(event.offsetX, event.offsetY);
 }
 
-function startPainting(event) {
+function startPainting() {
   isPainting = true;
   startX = event.offsetX;
   startY = event.offsetY;
 }
 
-function cancelPainting(event) {
+function cancelPainting() {
   if (mode !== 5) {
     isPainting = false;
     ctx.beginPath();
@@ -110,12 +110,14 @@ function onCanvasClick() {
     const textSize = fontSizes.value;
     const textEffect = fontEffects.value;
     if (text !== "" && textEffect === "fill") {
+      ctx.beginPath();
       ctx.save();
       ctx.lineWidth = 1;
       ctx.font = `${textSize}px ${textFont}`;
       ctx.fillText(text, event.offsetX, event.offsetY);
       ctx.restore();
     } else if (textEffect === "stroke") {
+      ctx.beginPath();
       ctx.save();
       ctx.lineWidth = 1;
       ctx.font = `${textSize}px ${textFont}`;
@@ -134,6 +136,7 @@ function onClickErase() {
   ctx.strokeStyle = "white";
   isFilling = false;
   mode = 0;
+  ctx.beginPath();
 }
 
 function onClickFile(event) {
