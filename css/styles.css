@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Hi+Melody&family=Jua&family=Lobster&family=Nanum+Myeongjo&family=Permanent+Marker&family=Roboto&family=Sansita:wght@400;700;800&family=Tangerine&display=swap");
-@import "variables.css";
-@import "reset.css";
-@import "palette.css";
-@import "brush.css";
-@import "buttons.css";
-@import "text.css";
+@import "./variables.css";
+@import "./reset.css";
+@import "./palette.css";
+@import "./brush.css";
+@import "./buttons.css";
+@import "./text.css";
 
 body {
   font-family: "Sansita", cursive;
