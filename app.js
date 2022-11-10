@@ -103,7 +103,6 @@ function onColorClick(event) {
 function onCanvasClick() {
   if (isFilling) {
     ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-    isFilling = false;
   } else if (mode === 4) {
     const text = textInput.value;
     const textFont = fontTypes.value;
